@@ -3,7 +3,7 @@
 <div class='toolbar'>
   <ul class='actions'>
     <li id="new_product_datasheet_link">
-      <%= button_link_to t("upload_product_datasheet"), new_admin_product_datasheet_path, {:remote => true, :icon => 'add'} %>
+      <%= button_link_to t("upload_product_datasheet"), new_admin_product_datasheet_path, {:remote => true, :icon => 'add', :id => 'admin_new_product_datasheet'} %>
     </li>
   </ul>
   <br class='clear' />
@@ -11,7 +11,7 @@
 
 <h1><%= "#{t("actions.listing")} #{t("product_datasheets")}" %></h1>
 
-<div id="new_product_datasheet"></div>
+<div id="new_product_datasheet" data-hook></div>
 
 <table class="index">
   <tr data-hook="admin_product_datasheets_index_headers">
