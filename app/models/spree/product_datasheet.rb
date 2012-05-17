@@ -3,7 +3,7 @@ class Spree::ProductDatasheet < ActiveRecord::Base
   belongs_to :user
   
   attr_accessor :queries_failed, :records_failed, :records_matched, :records_updated
-  
+  attr_accessible :xls
   before_save :update_statistics
   
   after_find :setup_statistics
